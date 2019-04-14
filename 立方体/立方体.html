@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        div {
+            width: 100px;
+            height: 100px;
+        }
+        .box div {
+            opacity: 0.8;
+            transition: all 1s;
+            text-align: center;
+            line-height: 100px;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        .box {
+            margin: 100px auto;
+            position: relative;
+            transform-style: preserve-3d;
+            transform: rotateX(20deg) rotateY(20deg);
+            animation: rotate 5s linear infinite;
+        }
+        .box:hover .top {
+            transform: rotateX(90deg) translateZ(100px);
+        }
+        .box:hover .bottom {
+            transform: rotateX(-90deg) translateZ(100px);
+        }
+        .box:hover .left {
+            transform: rotateY(-90deg) translateZ(100px);
+        }
+        .box:hover .right {
+            transform: rotateY(90deg) translateZ(100px);
+        }
+        .box:hover .front {
+            transform: translateZ(100px);
+        }
+        .box:hover .back {
+            transform: rotateY(180deg) translateZ(100px);
+        }
+        @keyframes rotate {
+            0% {
+                transform: rotateX(20deg) rotateY(20deg);
+            }
+            100% {
+                transform: rotateX(380deg) rotateY(380deg);
+            }
+        }
+
+        .top {
+            background-color: #ffdc00;
+            transform: rotateX(90deg) translateZ(50px);
+        }
+        .bottom {
+            background-color: #4fff00;
+            transform: rotateX(-90deg) translateZ(50px);
+        }
+        .left {
+            background-color: #00ffdb;
+            transform: rotateY(-90deg) translateZ(50px);
+        }
+        .right {
+            background-color: #6900ff;
+            transform: rotateY(90deg) translateZ(50px);
+        }
+        .front {
+            background-color: #ff00b8;
+            transform: translateZ(50px);
+        }
+        .back {
+            background-color: #ff0067;
+            transform: rotateY(180deg) translateZ(50px);
+        }
+        img {
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+<div class="box">
+    <div class="top"><img src="1.jpg" alt=""></div>
+    <div class="bottom">下面</div>
+    <div class="left">左面</div>
+    <div class="right">右面</div>
+    <div class="front">前面</div>
+    <div class="back">后面</div>
+</div>
+
+</body>
+</html>

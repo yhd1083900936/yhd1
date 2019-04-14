@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+*{
+    margin: 0;
+    padding: 0;
+}
+.box{
+    position: relative;
+    width: 50px;
+    margin: 200px auto;
+    transform-style: preserve-3d ;
+    /*设置3D效果*/
+    transform: rotateX(-15deg) rotateY(-45deg);
+    animation: move 7s  alternate infinite;
+}
+ .top, .bottom ,.left ,.right, .front ,.rear{
+        position: absolute;
+        width: 100px;
+        height:100px;
+        text-align: center;
+       padding: 10px auto;
+        opacity: 0.8;
+     background-size: cover;
+     transition: all 1s ;
+    }
+
+ .top1, .bottom1 ,.left1, .right1, .front1, .rear1 {
+    position: absolute;
+    width: 80px;
+    height:80px;
+     transition: all 1s linear;
+     top: 10px;
+     left: 10px;
+     opacity: 0.8;
+    text-align: center;
+    opacity: 0.8;
+}
+    .top{
+        transform: rotateX(90deg) translateZ(50px);
+    }
+    .bottom{
+        transform: rotateX(-90deg) translateZ(50px);
+    }
+    .left{
+        transform: rotateY(-90deg) translateZ(50px);
+    }
+    .right{
+        transform: rotateY(90deg) translateZ(50px);
+    }
+    .front{
+        transform: translateZ(50px);
+    }
+    .rear{
+        transform: rotateY(180deg) translateZ(50px);
+    }
+   .aimg{
+    width: 100px;
+    height: 100px;
+}
+.bimg{
+    width: 80px;
+    height: 80px;
+}
+
+.top1{
+    transform: rotateX(90deg) translateZ(40px);
+}
+.bottom1{
+    transform: rotateX(-90deg) translateZ(40px);
+}
+.left1{
+    transform: rotateY(-90deg) translateZ(40px);
+}
+.right1{
+    transform: rotateY(90deg) translateZ(40px);
+}
+.front1{
+    transform: translateZ(40px);
+}
+.rear1{
+    transform: rotateY(180deg) translateZ(40px);
+}
+    @keyframes move  {
+        0%{
+            transform: rotateX(-15deg) rotateY(-45deg);
+        }
+        100%{
+            transform: rotateX(360deg) rotateY(360deg);
+        }
+    }
+     .box:hover .top .bottom .left .right .front .rear{
+         width: 150px;
+         height: 150px;
+     }
+.box:hover .top{
+        transform: rotateX(90deg) translateZ(120px);
+    }
+.box:hover .bottom{
+    transform: rotateX(-90deg) translateZ(120px);
+}
+.box:hover .left{
+    transform: rotateY(-90deg) translateZ(120px);
+}
+.box:hover .right{
+    transform: rotateY(90deg) translateZ(120px);
+}
+.box:hover .front{
+    transform: translateZ(120px);
+}
+.box:hover .rear{
+    transform: rotateY(180deg) translateZ(120px);
+}
+
+
+
+</style>
+<body>
+<div class="box">
+<div class="top"><img src="1.jpg" class="aimg"></div>
+<div class="bottom"><img src="2.jpg" class="aimg"></div>
+<div class="left"><img src="3.jpg" class="aimg"></div>
+<div class="right"><img src="4.jpg" class="aimg"></div>
+<div class="front"><img src="5.jpg" class="aimg"></div>
+<div class="rear"><img src="6.jpg" class="aimg"></div>
+    <div class="top1"><img src="7.jpg" class="bimg"></div>
+    <div class="bottom1"><img src="8.jpg" class="bimg"></div>
+    <div class="left1"><img src="9.jpg" class="bimg"></div>
+    <div class="right1"><img src="10.jpg" class="bimg"></div>
+    <div class="front1"><img src="11.jpg" class="bimg"></div>
+    <div class="rear1"><img src="12.jpg" class="bimg"></div>
+
+</div>
+</body>
+</html>
